@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX.</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+<body>
+    <section class="hero is-link">
+        <div class="hero-body">
+          <p class="title">
+            BUSCA Y ENCUENTRA A TU POKEMON FAVORITO.
+          </p>
+          <p class="subtitle">
+            Search Pokemon.
+          </p>
+        </div>
+      </section>
+      <br>
+        <div class= "field has-addons has-addons-centered">
+    <input class="input is-rounded input is-success" id="pokemon_name_input" type="text">
+    <button class="is-rounded button is-warning is-light" onclick="show_pokemon_details()"> Buscar Pokemon</button>
+        </div>
+    <div id="conteiner"></div>
+
+    <SCript src="./index.js"></SCript>
+</body>
+</html>
