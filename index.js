@@ -3,16 +3,23 @@
 
 let pokemon_name_input = document.getElementById("pokemon_name_input")
 let container = document.getElementById("conteiner")
+let container1 = document.getElementById("container1")
 const show_pokemon_details = () =>{
     console.log(pokemon_name_input.value)
     get_pokemon_details(pokemon_name_input.value).then(pokemon =>{
-        container.innerHTML = `<p class="field has-addons has-addons-centered">
-        <span> id: ${pokemon.id}</span>
-        <span> nombre: ${pokemon.name}</span> 
-        <span> orden: ${pokemon.order}</span>
-        <span> altura: ${pokemon.height}</span>   
-        <span> peso: ${pokemon.weight}</span>
-        <img src= "${pokemon.sprites.other["official-artwork"].front_default}" /></p>` //inspeccionamos el onjeto parA OBTENER LA IMAGEN DESDE LA API
+        container.innerHTML += `<p class="field has-addons has-addons-centered">
+    
+        <img src= "${pokemon.sprites.other["official-artwork"].front_default}"
+
+        </p>` //inspeccionamos el onjeto parA OBTENER LA IMAGEN DESDE LA API
+
+        container1.innerHTML += `<ol> 
+        <li> id: ${pokemon.id}</li>
+        <li> nombre: ${pokemon.name}</li>
+        <li> orden: ${pokemon.order}</li>
+        <li> altura: ${pokemon.height}</li>
+        <li> peso: ${pokemon.weight}</li>
+        </ol>`
     })      .catch((error) => {
         console.log(error);
        });
