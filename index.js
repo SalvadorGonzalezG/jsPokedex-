@@ -14,12 +14,14 @@ const show_pokemon_details = () =>{
         </p>` //inspeccionamos el onjeto parA OBTENER LA IMAGEN DESDE LA API
 
         container1.innerHTML += `<ol class="content has-text-centered"> 
-        <li> TYPE: ${pokemon.types[0].type["name"]}<li>
-        <li> ID: ${pokemon.id}</li>
-        <li> NAME: ${pokemon.name}</li>
+        <li> TYPE: ${pokemon.types[0].type["name"]}</li> <i class="fa fa-atom"></i>
+        <li> ID: ${pokemon.id}</li> <i class="fa fa-fingerprint"></i>
+        <li> NAME: ${pokemon.name}</li> <i class="fa fa-signature"></i>
         <li> ORDER: ${pokemon.order}</li>
-        <li> HEIGHT: ${pokemon.height}</li>
-        <li> WIGHT: ${pokemon.weight}</li>
+        <li> HEIGHT: ${pokemon.height}</li> <i class="fa fa-cake-candles"></i>
+        <li> WIGHT: ${pokemon.weight}</li> <i class="fa fa-scale-balanced"></i>
+        <li> GÉNERO: </li> <i class="fa fa-mars"></i> <i class="fa fa-venus"></i>
+        <br>
         </ol>`
     })      .catch((error) => {
         console.log(error);
